@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1 class="display-5">Expense-income Tracker</h1>
+        <p class="lead">Keep track of your expenses and income easily.</p>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Expense Form</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="exp" id="form1">
+                            <div class="form-group">
+                                <label for="doe">Date</label>
+                                <input type="date" name="doe" id="doe" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Detail</label>
+                                <input type="text" name="name" id="name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <input type="number" name="price" id="price" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="addexp btn btn-danger" type="submit">Add Expense</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <h3 class="totalexp" id="totalexpense"></h3>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Income Form</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="inc" id="form2">
+                            <div class="form-group">
+                                <label for="doi">Date</label>
+                                <input type="date" name="doi" id="doi" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="source">Source</label>
+                                <input type="text" name="source" id="source" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" name="amount" id="amount" class="form-control">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="addinc btn btn-success" type="submit">Add Income</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <h3 class="totalinc" id="totalincome"></h3>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row mt-5"> -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="bg-dark text-white">
+                    <tr>
+                        <th>No</th>
+                        <th>Type</th>
+                        <th>Detail</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tbody class="expensedata">
+                    <!-- Expense Table Content Here -->
+                </tbody>
+                <tbody class="incomedata">
+                    <!-- Income Table Content Here -->
+                </tbody>
+            </table>
+        </div>
+        <!-- </div> -->
+
+        <div class="row mt-5">
+            <div class="jumbotron">
+                <h1 class="display-4">Check status</h1>
+                <p class="lead" id="checkstatus"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
